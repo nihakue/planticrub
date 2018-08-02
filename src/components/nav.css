@@ -1,0 +1,19 @@
+nav {
+  flex: 0.5;
+  display: flex;
+}
+
+nav ul {
+  list-style-type: none;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  flex: 0.3;
+}
+
+nav ul a {
+  text-decoration: none;
+}

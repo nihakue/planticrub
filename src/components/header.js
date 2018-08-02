@@ -1,33 +1,52 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, StaticQuery, graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
+import Nav from './nav'
+
+import './header.css'
+
+const Header = () => (
+  <StaticQuery
+    query={graphql`
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `}
+    render={data => {
+      const { title } = data.site.siteMetadata
+      return (
+        <>
+          <Helmet
+            title={title}
+            meta={[
+              { name: 'description', content: 'Sample' },
+              { name: 'keywords', content: 'sample, something' },
+            ]}
+          />
+          <div className="header">
+            <div className="logo">
+              <h1>
+                <Link
+                  to="/"
+                  style={{
+                    textDecoration: 'none',
+                  }}
+                >
+                  {title}
+                </Link>
+              </h1>
+            </div>
+            <Nav />
+          </div>
+        </>
+      )
     }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </div>
+  />
 )
 
 export default Header
