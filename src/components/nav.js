@@ -43,12 +43,16 @@ export default function NavQuery() {
         }
       `}
       render={data => {
+        console.log(data)
         const navPages = data.allSitePage.edges
-          .filter(
-            it =>
-              it.node.pluginCreator.name === 'gatsby-plugin-page-creator' &&
-              !BLACK_LIST.includes(it.node.path)
-          )
+          .filter(it => {
+            const { pluginCreator, path } = it.node
+            return (
+              pluginCreator &&
+              pluginCreator.name === 'gatsby-plugin-page-creator' &&
+              !BLACK_LIST.includes(path)
+            )
+          })
           .map(it => ({
             path: it.node.path,
           }))
