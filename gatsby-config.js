@@ -62,8 +62,14 @@ module.exports = {
         icon: 'src/images/logo.jpg',
       },
     },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/style/typography`,
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-offline',
+    'gatsby-plugin-offline', // should always follow manifest
   ],
 }

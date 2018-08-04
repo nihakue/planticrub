@@ -10,6 +10,7 @@
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sharp": "next",
+    "gatsby-plugin-typography": "next",
     "gatsby-remark-images": "next",
     "gatsby-remark-smartypants": "next",
     "gatsby-source-filesystem": "next",
@@ -18,7 +19,10 @@
     "gatsby-transformer-sharp": "next",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-typography": "^0.16.13",
+    "typography": "^0.16.17",
+    "typography-theme-moraga": "^0.15.10"
   },
   "keywords": ["gatsby"],
   "license": "MIT",
