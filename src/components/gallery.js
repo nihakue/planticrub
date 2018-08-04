@@ -9,12 +9,14 @@ export default function Gallery() {
     <StaticQuery
       query={graphql`
         {
-          allImageSharp {
+          gallery: allFile(filter: { sourceInstanceName: { eq: "gallery" } }) {
             edges {
               node {
-                fixed(width: 250, height: 250) {
-                  originalName
-                  ...GatsbyImageSharpFixed
+                childImageSharp {
+                  fixed(width: 250, height: 250) {
+                    originalName
+                    ...GatsbyImageSharpFixed
+                  }
                 }
               }
             }
@@ -22,11 +24,11 @@ export default function Gallery() {
         }
       `}
       render={data => {
-        const { edges } = data.allImageSharp
+        const { edges } = data.gallery
         return (
           <div className="gallery">
             {edges.map(edge => {
-              const { fixed } = edge.node
+              const { fixed } = edge.node.childImageSharp
               return <Img alt={fixed.originalName} fixed={fixed} />
             })}
           </div>
