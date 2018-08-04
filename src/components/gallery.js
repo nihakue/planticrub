@@ -1,5 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import './gallery.css'
 
@@ -11,11 +12,9 @@ export default function Gallery() {
           allImageSharp {
             edges {
               node {
-                ... on ImageSharp {
-                  resize(width: 200, height: 200, rotate: 180) {
-                    src
-                    originalName
-                  }
+                fixed(width: 250, height: 250) {
+                  originalName
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
@@ -27,8 +26,8 @@ export default function Gallery() {
         return (
           <div className="gallery">
             {edges.map(edge => {
-              const { src, originalName } = edge.node.resize
-              return <img alt={originalName} src={src} />
+              const { fixed } = edge.node
+              return <Img alt={fixed.originalName} fixed={fixed} />
             })}
           </div>
         )
