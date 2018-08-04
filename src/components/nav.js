@@ -5,6 +5,8 @@ import './nav.css'
 
 const BLACK_LIST = ['/404/', '/']
 
+const PLUGIN_WHITELIST = ['default-site-plugin', 'gatsby-plugin-page-creator']
+
 const upper = lower => lower.replace(/^\w/, c => c.toUpperCase())
 
 function formatPath(path) {
@@ -49,7 +51,7 @@ export default function NavQuery() {
             const { pluginCreator, path } = it.node
             return (
               pluginCreator &&
-              pluginCreator.name === 'gatsby-plugin-page-creator' &&
+              PLUGIN_WHITELIST.includes(pluginCreator.name) &&
               !BLACK_LIST.includes(path)
             )
           })

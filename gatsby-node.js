@@ -1,7 +1,37 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require('path')
+const { createFilePath } = require('gatsby-source-filesystem')
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  const markdownPage = path.resolve('./src/components/markdownPage.js')
+  const result = await graphql(
+    `
+      {
+        allMarkdownRemark(limit: 1000) {
+          edges {
+            node {
+              frontmatter {
+                title
+                path
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
+  if (result.errors) {
+    throw Error(result.errors)
+  }
+
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const { path } = node.frontmatter
+    createPage({
+      path,
+      component: markdownPage,
+      context: {}, // additional data can be passed via context
+    })
+  })
+}
