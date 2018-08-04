@@ -1,6 +1,6 @@
 ---
 title: About Me
-path: /about
+path: /
 ---
 
 # PLANTICRUB *plan·ti·crub*

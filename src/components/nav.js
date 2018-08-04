@@ -3,13 +3,16 @@ import { StaticQuery, Link, graphql } from 'gatsby'
 
 import './nav.css'
 
-const BLACK_LIST = ['/404/', '/']
+const BLACK_LIST = ['/404/']
 
 const PLUGIN_WHITELIST = ['default-site-plugin', 'gatsby-plugin-page-creator']
 
 const upper = lower => lower.replace(/^\w/, c => c.toUpperCase())
 
 function formatPath(path) {
+  if (path === '/') {
+    return 'Home'
+  }
   return upper(path.replace(/\//g, ''))
 }
 
@@ -32,7 +35,7 @@ export default function NavQuery() {
     <StaticQuery
       query={graphql`
         {
-          allSitePage {
+          allSitePage(sort: { fields: path, order: ASC }) {
             edges {
               node {
                 path
