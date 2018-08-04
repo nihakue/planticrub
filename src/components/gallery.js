@@ -29,7 +29,13 @@ export default function Gallery() {
           <div className="gallery">
             {edges.map(edge => {
               const { fixed } = edge.node.childImageSharp
-              return <Img alt={fixed.originalName} fixed={fixed} />
+              return (
+                <Img
+                  key={fixed.originalName}
+                  alt={fixed.originalName}
+                  fixed={fixed}
+                />
+              )
             })}
           </div>
         )
