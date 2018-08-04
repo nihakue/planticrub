@@ -45,7 +45,6 @@ export default function NavQuery() {
         }
       `}
       render={data => {
-        console.log(data)
         const navPages = data.allSitePage.edges
           .filter(it => {
             const { pluginCreator, path } = it.node
