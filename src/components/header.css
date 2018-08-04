@@ -1,12 +1,17 @@
 .header {
   background: white;
   display: flex;
-  align-items: center;
   margin: 0 auto;
   max-width: 960px;
   padding: 1.45rem 1.0875rem;
 }
 
 .header .logo {
-  flex: 1;
+  flex: 2;
+}
+
+@media (max-width: 600px) {
+  .header .logo {
+    display: none;
+  }
 }
