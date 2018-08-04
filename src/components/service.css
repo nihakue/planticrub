@@ -1,0 +1,22 @@
+section.service {
+  grid-template-areas: 'a b';
+  display: grid;
+  grid-gap: 1em;
+  margin-bottom: 1em;
+}
+
+@media (max-width: 600px) {
+  section.service {
+    grid-template-areas:
+      'a'
+      'b';
+  }
+}
+
+section.service .image {
+  grid-area: a;
+}
+
+section.service .body {
+  grid-area: b;
+}

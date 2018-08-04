@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Initital consultation",
+    "description": "An initial consultation about your garden is free and is simply a chance to meet and have a chat about your garden, what you'd like from it and what types of planting you love. I will take the opportunity to measure the sections of your garden you are interested to work on and to photograph and take notes. This visit normally lasts about an hour.",
+    "image": "../images/consultation.jpeg"
+  },
+  {
+    "title": "Planting design estimate",
+    "description": "After the initial consultation I will give you an estimate for how long I think a design will take before you commission me to start designing. I charge £25.00 per hour for design time.",
+    "image": "../images/estimate.jpeg"
+  },
+  {
+    "title": "Design and quote",
+    "description": "After completing your design and planting list I will bring the work back to you to discuss, I will also bring back a quote to source all materials and to have the whole design installed. Any changes you want will be agreed at this stage and if you want to go ahead and we can discuss dates for installation.",
+    "image": "../images/quote.jpg"
+  },
+  {
+    "title": "Prep and planting",
+    "description": "I will return to prep and plant your border on a day agreed to in advance.",
+    "image": "../images/prep.jpg"
+  }
+]

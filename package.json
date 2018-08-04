@@ -12,6 +12,7 @@
     "gatsby-plugin-sharp": "next",
     "gatsby-remark-images": "next",
     "gatsby-source-filesystem": "next",
+    "gatsby-transformer-json": "next",
     "gatsby-transformer-remark": "next",
     "gatsby-transformer-sharp": "next",
     "react": "^16.4.1",
