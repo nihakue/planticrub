@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Planticrub Garden Design',
+    author: 'Robyn Westmarwick',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
