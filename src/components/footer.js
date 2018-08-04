@@ -19,7 +19,7 @@ function ContactDetail({ field, value }) {
         </a>
       )
     default:
-      return <span>{value}</span>
+      return <p>{value}</p>
   }
 }
 
@@ -36,14 +36,16 @@ function ContactDetails() {
 }
 
 function Copyright() {
-  return <div className="copyright">© 2018 Planticrub</div>
+  return <div className="copyright">© 2018 Planticrub Garden Design</div>
 }
 
 export default function Footer() {
   return (
     <div className="footer">
-      <ContactDetails />
-      <Copyright />
+      <div className="footer-content">
+        <ContactDetails />
+        <Copyright />
+      </div>
     </div>
   )
 }

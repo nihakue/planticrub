@@ -1,27 +1,28 @@
 .footer {
   width: 100%;
-  background-color: lightblue;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 50% 50%;
-  grid-gap: 1em;
-  padding: 20px 40px;
+  background-color: #d6edff;
+}
+
+.footer-content {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.0875rem 1.45rem;
 }
 
 .footer ul.contact {
   list-style-type: none;
-  flex: 4;
-  display: flex;
-  align-items: center;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 
 .footer ul.contact li {
   flex: 1;
   margin: 0;
+  white-space: nowrap;
 }
 
 .footer .copyright {
   flex: 1;
+  margin: 0;
 }

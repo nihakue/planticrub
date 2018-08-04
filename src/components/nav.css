@@ -1,17 +1,18 @@
 nav {
-  flex: 0.5;
-  display: flex;
-}
-
-nav ul {
-  list-style-type: none;
   flex: 1;
   display: flex;
   justify-content: flex-end;
 }
 
+nav ul {
+  list-style-type: none;
+  display: flex;
+  padding: 5px;
+}
+
 nav ul li {
-  flex: 0.3;
+  flex: 1;
+  margin: 5px;
 }
 
 nav ul a {

@@ -13,9 +13,9 @@ export default function Gallery() {
             edges {
               node {
                 childImageSharp {
-                  fixed(width: 250, height: 250) {
+                  fluid(maxWidth: 250, maxHeight: 250, quality: 100) {
                     originalName
-                    ...GatsbyImageSharpFixed
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -28,12 +28,12 @@ export default function Gallery() {
         return (
           <div className="gallery">
             {edges.map(edge => {
-              const { fixed } = edge.node.childImageSharp
+              const { fluid } = edge.node.childImageSharp
               return (
                 <Img
-                  key={fixed.originalName}
-                  alt={fixed.originalName}
-                  fixed={fixed}
+                  key={fluid.originalName}
+                  alt={fluid.originalName}
+                  fluid={fluid}
                 />
               )
             })}
