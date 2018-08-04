@@ -46,6 +46,7 @@ module.exports = {
               withWebp: true,
             },
           },
+          'gatsby-remark-smartypants',
         ],
       },
     },
