@@ -38,7 +38,14 @@ const Header = () => (
             ]}
           />
           <div className="header">
-            <Img fixed={fixed} alt="logo" />
+            <Link
+              to="/"
+              style={{
+                textDecoration: 'none',
+              }}
+            >
+              <Img fixed={fixed} alt="logo" />
+            </Link>
             <div className="logo">
               <h1>
                 <Link
