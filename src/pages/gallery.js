@@ -5,7 +5,7 @@ import Gallery from '../components/gallery'
 
 const GalleryPage = () => (
   <Layout>
-    <h2>Previous Work</h2>
+    <h1>Previous Work</h1>
     <Gallery />
   </Layout>
 )
