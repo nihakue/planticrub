@@ -22,7 +22,9 @@ function Nav({ pages }) {
       <ul>
         {pages.map(({ path }) => (
           <li key={path}>
-            <Link to={path}>{formatPath(path)}</Link>
+            <Link exact to={path} activeClassName="active">
+              {formatPath(path)}
+            </Link>
           </li>
         ))}
       </ul>
