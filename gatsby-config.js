@@ -71,5 +71,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-offline', // should always follow manifest
+    'gatsby-plugin-netlify-cms',
   ],
 }
