@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, Link, graphql } from 'gatsby'
+import { useStaticQuery, Link, graphql } from 'gatsby'
 
 import './nav.css'
 
@@ -33,37 +33,31 @@ function Nav({ pages }) {
 }
 
 export default function NavQuery() {
-  return (
-    <StaticQuery
-      query={graphql`
-        {
-          allSitePage(sort: { fields: path, order: ASC }) {
-            edges {
-              node {
-                path
-                pluginCreator {
-                  name
-                }
-              }
+  const data = useStaticQuery(graphql`
+    {
+      allSitePage(sort: { fields: path, order: ASC }) {
+        edges {
+          node {
+            path
+            pluginCreator {
+              name
             }
           }
         }
-      `}
-      render={data => {
-        const navPages = data.allSitePage.edges
-          .filter(it => {
-            const { pluginCreator, path } = it.node
-            return (
-              pluginCreator &&
-              PLUGIN_WHITELIST.includes(pluginCreator.name) &&
-              !BLACK_LIST.includes(path)
-            )
-          })
-          .map(it => ({
-            path: it.node.path,
-          }))
-        return <Nav pages={navPages} />
-      }}
-    />
-  )
+      }
+    }
+  `)
+  const navPages = data.allSitePage.edges
+    .filter(it => {
+      const { pluginCreator, path } = it.node
+      return (
+        pluginCreator &&
+        PLUGIN_WHITELIST.includes(pluginCreator.name) &&
+        !BLACK_LIST.includes(path)
+      )
+    })
+    .map(it => ({
+      path: it.node.path,
+    }))
+  return <Nav pages={navPages} />
 }
