@@ -1,6 +1,6 @@
 import React from 'react'
 
-import contact from '../data/contact.json'
+import contact from '../../content/contact.json'
 
 import './footer.css'
 

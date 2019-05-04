@@ -9,9 +9,10 @@ collections:
   - name: "data"
     label: "Data"
     files:
-      - file: "content/contact.md"
+      - file: "content/contact.json"
         name: "contact"
         label: "Contact Details"
+        format: "json"
         fields:
           - {label: "Email", name: "email", widget: "string"}
           - {label: "Phone Number", name: "phone", widget: "string"}
