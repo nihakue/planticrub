@@ -1,0 +1,14 @@
+---
+author: Kim Cosh
+quote: >-
+  Robyn has been a godsend to me for the last year… As someone who gains great
+  pleasure from our garden but who seems to spend a fortune on plants only to
+  die or not thrive using Robyn’s expertise & knowledge of plants has made such
+  a difference. From her wonderful designs, to collecting and planting the
+  areas, she has transformed our garden with a woodland area, a rockery and
+  flower border… not only that she is a dab hand at pruning our fruit trees and
+  other shrubs… I can’t recommend her highly enough…
+city: Edinburgh
+year: 2014
+---
+
