@@ -6,9 +6,9 @@ media_folder: src/gallery
 public_folder: /img
 
 collections:
-  - name: "testimonials"
-    label: "Testimonials"
-    folder: "content/testimonials"
+  - name: "testimonial"
+    label: "Testimonial"
+    folder: "content/testimonial"
     create: true
     identifier_field: author
     editor:
