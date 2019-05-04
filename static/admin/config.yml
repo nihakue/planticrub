@@ -10,8 +10,11 @@ collections:
     label: "Testimonials"
     folder: "content/testimonials"
     create: true
+    identifier_field: author
     editor:
      preview: false
     fields:
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Quote", name: "quote", widget: "string" }
+      - { label: "Quote", name: "quote", widget: "text" }
+      - { label: "City", name: "city", widget: "string" }
+      - { label: "Year", name: "year", widget: "number", valueType: "int" }
