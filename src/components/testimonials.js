@@ -18,7 +18,7 @@ export default function Services() {
     }
   }
   `)
-  const testimonials = data.allMarkdownRemark.edges.map(it => it.node.frontmatter).filter(it => !!it.author).map(frontmatter => {
+  const testimonials = data.allMarkdownRemark.edges.map(it => it.node.frontmatter).filter(it => !!it.author).sort((a, b) => b.year - a.year).map(frontmatter => {
     const { author, quote, city, year } = frontmatter
     return (
       <>
