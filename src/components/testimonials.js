@@ -23,9 +23,9 @@ export default function Services() {
     return (
       <>
       <blockquote>
-        <p>{quote}</p>
+        {quote}
+        <footer>{`— ${author}, ${city}, ${year}`}</footer>
       </blockquote>
-      <p>{`—${author}, ${city}, ${year}`}</p>
       </>
     )
   })
