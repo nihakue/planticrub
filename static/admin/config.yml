@@ -18,3 +18,13 @@ collections:
       - { label: "Quote", name: "quote", widget: "text" }
       - { label: "City", name: "city", widget: "string" }
       - { label: "Year", name: "year", widget: "number", valueType: "int" }
+  - name: "page"
+    label: "Page"
+    folder: "content/page"
+    create: true
+    editor:
+     preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Path", name: "path", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
