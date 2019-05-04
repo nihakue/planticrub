@@ -6,6 +6,16 @@ media_folder: src/gallery
 public_folder: /img
 
 collections:
+  - name: "data"
+    label: "Data"
+    files:
+      - file: "content/contact.md"
+        name: "contact"
+        label: "Contact Details"
+        fields:
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Phone Number", name: "phone", widget: "string"}
+          - {label: "Name", name: "name", widget: "string"}
   - name: "testimonial"
     label: "Testimonial"
     folder: "content/testimonial"
