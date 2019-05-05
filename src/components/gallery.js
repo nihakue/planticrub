@@ -6,30 +6,36 @@ import './gallery.css'
 
 export default function Gallery() {
   const data = useStaticQuery(graphql`
-    {
-      gallery: allFile(filter: { sourceInstanceName: { eq: "gallery" } }) {
-        edges {
-          node {
-            childImageSharp {
-              fluid(maxWidth: 250, maxHeight: 250, quality: 100) {
-                originalName
-                ...GatsbyImageSharpFluid
+  {
+    file(name: {eq: "gallery"}) {
+      childMarkdownRemark {
+        frontmatter {
+          images {
+            title
+            image {
+              childImageSharp{
+                fluid(maxWidth: 250, maxHeight: 250, quality: 100) {
+                  originalName
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
-          }
+          } 
         }
       }
-    }
+  }
+}
   `)
-  const { edges } = data.gallery
+  const { images } = data.file.childMarkdownRemark.frontmatter
   return (
     <div className="gallery">
-      {edges.map(edge => {
-        const { fluid } = edge.node.childImageSharp
+      {images.map(node => {
+        const { image, title } = node;
+        const { fluid } = image.childImageSharp
         return (
           <Img
             key={fluid.originalName}
-            alt={fluid.originalName}
+            alt={title}
             fluid={fluid}
           />
         )

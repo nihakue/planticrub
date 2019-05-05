@@ -6,7 +6,7 @@ import Service from './service'
 export default function Services() {
   const data = useStaticQuery(graphql`
     {
-      allServicesJson {
+      allServicesJson(sort: {fields: step}) {
         edges {
           node {
             title

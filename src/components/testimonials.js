@@ -3,24 +3,21 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 export default function Services() {
   const data = useStaticQuery(graphql`
-    {
-      allMarkdownRemark(limit: 1000) {
-        edges {
-          node {
-            frontmatter {
-              author
-              quote
-              city
-              year
-            }
-          }
+  {
+    allTestimonialsJson {
+      edges {
+        node {
+          author
+            quote
+            city
+            year
         }
       }
     }
+  }
   `)
-  const testimonials = data.allMarkdownRemark.edges
-    .map(it => it.node.frontmatter)
-    .filter(it => !!it.author)
+  const testimonials = data.allTestimonialsJson.edges
+    .map(it => it.node)
     .sort((a, b) => b.year - a.year)
     .map(frontmatter => {
       const { author, quote, city, year } = frontmatter

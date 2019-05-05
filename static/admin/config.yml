@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: src/gallery
+media_folder: static/img
 public_folder: /img
 
 collections:
@@ -17,25 +17,51 @@ collections:
           - {label: "Email", name: "email", widget: "string"}
           - {label: "Phone Number", name: "phone", widget: "string"}
           - {label: "Name", name: "name", widget: "string"}
-  - name: "testimonial"
-    label: "Testimonial"
-    folder: "content/testimonial"
+  - name: "page"
+    label: "Page"
     create: true
-    identifier_field: author
     editor:
      preview: false
+    files:
+      - file: "content/page/index.md"
+        label: "Landing Page"
+        name: "index"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - {label: "Path", name: "path", widget: "hidden", default: "/"}
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "content/page/gallery.md"
+        label: "Gallery"
+        name: "gallery"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "gallery-page"}
+          - {label: "Path", name: "path", widget: "hidden", default: "/gallery"}
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "string", required: false}
+              - {label: "Image", name: "image", widget: "image"}
+  - name: "testimonials"
+    label: "Testimonials"
+    folder: "content/testimonials"
+    create: true
+    format: "json"
+    identifier_field: author
     fields:
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Quote", name: "quote", widget: "text" }
       - { label: "City", name: "city", widget: "string" }
       - { label: "Year", name: "year", widget: "number", valueType: "int" }
-  - name: "page"
-    label: "Page"
-    folder: "content/page"
+  - name: "services"
+    label: Services
+    folder: "content/services"
     create: true
-    editor:
-     preview: false
+    format: "json"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Path", name: "path", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Step", name: step, widget: "number"}
