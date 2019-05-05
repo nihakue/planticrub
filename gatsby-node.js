@@ -37,4 +37,6 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {}, // additional data can be passed via context
     })
   })
+
+  // await createGallery();
 }

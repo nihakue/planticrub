@@ -1,8 +1,8 @@
 ---
-title: Home
 path: /
+title: Home
 ---
-# PLANTICRUB *plan·ti·crub*
+# PLANTICRUB _plan·ti·crub_
 
 > Noun.  A planticrub was a type of small dry-stoned walled garden/enclosure, designed as a nursery area for kale seedlings in the Shetland Islands. Also crub or, in Unst, crö or plantiecrö.
 
@@ -15,4 +15,4 @@ In 2015 I exhibited a containerised plant display at Gardening Scotland, winning
 
 I believe in the power of gardens, to have your own living oasis, a haven for wildlife and people alike. I love designing for year round interest, seeing life and colour in the garden on a dreich winter’s day lifts my mood like nothing else.
 
-![Robyn Marwick, Garden designer and gardener based in Edinburgh, United Kingdom](./me.jpg)
+![Robyn Marwick, Garden designer and gardener based in Edinburgh, United Kingdom](/img/me.jpg "Robyn Marwick")

@@ -8,36 +8,24 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `gallery`,
-        path: `${__dirname}/src/gallery/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         path: `${__dirname}/content`,
         name: 'content',
       },
     },
-    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'services',
-        path: `${__dirname}/src/data/services.json`,
+        path: `${__dirname}/static/img`,
+        name: 'uploads',
       },
     },
+    `gatsby-plugin-netlify-cms-paths`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-plugin-netlify-cms-paths`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -59,7 +47,7 @@ module.exports = {
         background_color: '#f7f0eb',
         theme_color: '#a2466c',
         display: 'minimal-ui',
-        icon: 'src/images/logo.png',
+        icon: 'static/img/logo.png',
       },
     },
     {
@@ -71,6 +59,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-offline', // should always follow manifest
-    'gatsby-plugin-netlify-cms',
+    'gatsby-plugin-netlify-cms', // should always be last I guess?
   ],
 }
