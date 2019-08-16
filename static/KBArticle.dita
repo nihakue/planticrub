@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="KBArticle">
-  <title>Blah blah blah</title>
+  <title>Blah
+    <?oxy_insert_start author="Gabriel West" timestamp="20190816T114510+0000"?>v2<?oxy_insert_end?><?oxy_delete author="Gabriel West" timestamp="20190816T114509+0000" content="blah blah"?></title>
   <body>
     <p>
       <table frame="all" rowsep="1" colsep="1">
@@ -18,7 +19,7 @@
           </thead>
           <tbody>
             <row>
-              <entry>Mac</entry>
+              <entry>Mac<?oxy_insert_start author="Gabriel West" timestamp="20190816T114516+0000"?>intosh<?oxy_insert_end?></entry>
               <entry>Thing</entry>
               <entry>Other thing</entry>
             </row>
@@ -27,7 +28,9 @@
       </table>
     </p>
     <section>
-      <title>There's something wrong with this picture</title>
+      <title>There's
+        <?oxy_delete author="Gabriel West" timestamp="20190816T114525+0000" content="something"?><?oxy_insert_start author="Gabriel West" timestamp="20190816T114525+0000"?>nothing<?oxy_insert_end?>
+        wrong with this picture</title>
       <table frame="all" rowsep="1" colsep="1">
         <tgroup cols="2">
           <colspec colname="c1" colnum="1" colwidth="1*"/>
@@ -39,7 +42,7 @@
             </row>
             <row>
               <entry><b>Answer:</b></entry>
-              <entry>Something</entry>
+              <entry><?oxy_delete author="Gabriel West" timestamp="20190816T114531+0000" content="Something"?><?oxy_insert_start author="Gabriel West" timestamp="20190816T114531+0000"?>Nothing.<?oxy_insert_end?></entry>
             </row>
           </tbody>
         </tgroup>
@@ -47,3 +50,4 @@
     </section>
   </body>
 </topic>
+<?oxy_options track_changes="on"?>
