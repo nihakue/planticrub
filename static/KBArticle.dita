@@ -35,11 +35,11 @@
           <tbody>
             <row>
               <entry><b>Question:</b></entry>
-              <entry>What is wrong?</entry>
+              <entry>What is wrong? <concept conref="Concept.dita"/></entry>
             </row>
             <row>
               <entry><b>Answer:</b></entry>
-              <entry>Definitely something</entry>
+              <entry>Definitely something <xref href="Concept.dita"/></entry>
             </row>
           </tbody>
         </tgroup>
