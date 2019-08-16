@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="concept_rx5_wnj_t3b">
-    <title></title>
-    <shortdesc></shortdesc>
+<concept id="concept_qlm_34j_t3b">
+    <title>A Concept</title>
+    <shortdesc>Something something something</shortdesc>
     <conbody>
-        <p></p>
+        <p>Blah blah blah</p>
+        <image href="img/estimate.jpeg" id="image_fct_l4j_t3b"/>
     </conbody>
 </concept>

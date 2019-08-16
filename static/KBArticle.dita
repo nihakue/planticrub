@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="KBArticle">
-  <title></title>
+  <title>Blah v3</title>
   <body>
     <p>
       <table frame="all" rowsep="1" colsep="1">
@@ -18,16 +18,16 @@
           </thead>
           <tbody>
             <row>
-              <entry/>
-              <entry/>
-              <entry/>
+              <entry>Macintosh</entry>
+              <entry>Thing</entry>
+              <entry>Other thing</entry>
             </row>
           </tbody>
         </tgroup>
       </table>
     </p>
     <section>
-      <title>Issue description</title>
+      <title>There's definitely something wrong with this picture</title>
       <table frame="all" rowsep="1" colsep="1">
         <tgroup cols="2">
           <colspec colname="c1" colnum="1" colwidth="1*"/>
@@ -35,11 +35,11 @@
           <tbody>
             <row>
               <entry><b>Question:</b></entry>
-              <entry/>
+              <entry>What is wrong? <concept conref="Concept.dita"/></entry>
             </row>
             <row>
               <entry><b>Answer:</b></entry>
-              <entry/>
+              <entry>Definitely something <xref href="Concept.dita"/></entry>
             </row>
           </tbody>
         </tgroup>
